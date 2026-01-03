@@ -1,0 +1,69 @@
+# Zlogin Configuration
+# Plugin authentication untuk Minecraft 1.21+
+
+# Pengaturan Login
+login:
+  # Maksimal percobaan login sebelum kick
+  max-attempts: 3
+  
+  # Maksimal waktu untuk login (dalam detik)
+  max-time: 120
+  
+  # Reset percobaan login setelah waktu tertentu (dalam detik)
+  reset-attempts-after: 300
+
+# Pengaturan Password
+password:
+  # Panjang minimal password
+  min-length: 4
+  
+  # Panjang maksimal password
+  max-length: 32
+
+# Pengaturan Premium/Bedrock
+premium:
+  # Auto login untuk akun premium (verify via Mojang API)
+  auto-login-premium: true
+  
+  # Auto login untuk akun bedrock (nama dimulai dengan .)
+  auto-login-bedrock: true
+  
+  # Cache duration untuk premium check (dalam detik)
+  cache-duration: 300
+
+# Pengaturan Proteksi
+protection:
+  # Berikan blindness effect
+  blindness: true
+  
+  # Teleport ke ground jika di udara
+  teleport-to-ground: true
+  
+  # Prevent damage
+  prevent-damage: true
+  
+  # Prevent mob targeting
+  prevent-mob-target: true
+
+# Pesan
+messages:
+  prefix: "&8[&6Zlogin&8]&r "
+  
+  register-required-title: "&eRegister Required"
+  register-required-subtitle: "&fGunakan /register <password> <konfirmasi>"
+  
+  login-required-title: "&eLogin Required"
+  login-required-subtitle: "&fGunakan /login <password>"
+  
+  register-success: "&aRegister berhasil! Kamu sekarang sudah login."
+  login-success: "&aLogin berhasil! Selamat datang kembali."
+  
+  wrong-password: "&cPassword salah! Sisa percobaan: {attempts}"
+  max-attempts-reached: "&cTerlalu banyak percobaan login yang gagal!"
+  
+  timeout-kick: "&cKamu terlalu lama tidak login/register!"
+  
+  password-changed: "&aPassword berhasil diubah!"
+  account-removed: "&aAkun berhasil dihapus!"
+  
+  premium-auto-login: "&aSelamat datang! Kamu otomatis login (akun premium)."

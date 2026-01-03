@@ -1,0 +1,43 @@
+name: Zlogin
+version: 1.0.0
+main: com.zlogin.Zlogin
+api-version: 1.21
+author: YourName
+description: Plugin authentication untuk Minecraft 1.21+
+
+commands:
+  register:
+    description: Register akun baru
+    usage: /register <password> <konfirmasi-password>
+    aliases: [reg]
+  login:
+    description: Login ke akun
+    usage: /login <password>
+    aliases: [log]
+  changepassword:
+    description: Ubah password akun
+    usage: /changepassword <password-lama> <password-baru> <konfirmasi-password-baru>
+    aliases: [changepass, changepw]
+  removeaccount:
+    description: Hapus akun sendiri
+    usage: /removeaccount <password>
+    aliases: [deleteaccount, delaccount]
+  adminchangepassword:
+    description: Admin ubah password player
+    usage: /adminchangepassword <player> <password-baru>
+    aliases: [adminchangepass, adminchangepw]
+    permission: zlogin.admin
+  adminremoveaccount:
+    description: Admin hapus akun player
+    usage: /adminremoveaccount <player>
+    aliases: [admindeleteaccount, admindelaccount]
+    permission: zlogin.admin
+  autologin:
+    description: Player Auto Login
+    usage: /autologin
+    aliases: [autol]
+
+permissions:
+  zlogin.admin:
+    description: Akses admin untuk Zlogin
+    default: op
